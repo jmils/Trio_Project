@@ -5,6 +5,7 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
+    # @back_text = Movie.back_text 
   end
 
   # GET /movies/1
