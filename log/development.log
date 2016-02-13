@@ -61,3 +61,29 @@ Processing by MoviesController#new as HTML
   Rendered movies/_form.html.erb (101.6ms)
   Rendered movies/new.html.erb within layouts/application (108.9ms)
 Completed 200 OK in 180ms (Views: 149.9ms | ActiveRecord: 5.1ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.4ms)[0m  BEGIN
+  [1m[36mSQL (89.6ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "Rich Mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-13 17:43:04.002725"], ["updated_at", "2016-02-13 17:43:04.002725"]]
+  [1m[35m (20.0ms)[0m  COMMIT
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (6.9ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+
+
+Started GET "/" for 127.0.0.1 at 2016-02-13 12:44:06 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (37.7ms)
+Completed 200 OK in 124ms (Views: 112.3ms | ActiveRecord: 6.4ms)

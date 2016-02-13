@@ -3,5 +3,5 @@
 #
 # Examples:
 #
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+movies = Movie.create([{ title: 'Anchorman: The Legend of Ron Burgundy', front_text: "I have many leatherbound books", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9H.jpg", hint: "Rich Mahogany", likes: 0, dislikes: 0}])
+
