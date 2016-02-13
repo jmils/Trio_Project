@@ -1,27 +1,16 @@
+
 <% @movies.each do |movie| %>
 
-  <div class="flip-3d">
-    <figure>
-      <h4><%= movie.question %></h4>
-      <img src="<%= movie.front_image %>" alt="<%=movie.front_text%>">
-      <figcaption>
-        <%= movie.back_text %>
-        <img src="<%= movie.back_image %>" alt="bob">
-      </figcaption>
-  </figure>
-  </div> 
-
-<% end %>
-
-<div class="flip-3d">
+ <div class="flip-3d">
   <figure>
-    <img src="http://demosthenes.info/assets/images/thumbnails/bee.jpg" alt="">
-    <figcaption>Bee</figcaption>
+    <h4><%= movie.question %></h4>
+    <p>"<%= movie.front_text%>"</p>
+    <img src="<%= movie.front_image %>" alt="">
+    <figcaption> 
+    <h4><%= movie.back_text %></h4>
+    <img src="<%= movie.back_image %>" alt="">
+    </figcaption>
   </figure>
   </div>
-<div class="flip-3d">
-  <figure>
-    <img src="http://demosthenes.info/assets/images/thumbnails/queenstown.jpg" alt="">
-    <figcaption>Queenstown</figcaption>
-  </figure>
-</div>
+
+<% end %>
