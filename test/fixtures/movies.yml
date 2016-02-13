@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  title: MyString
+  front_text: MyString
+  front_image: MyString
+  question: MyString
+  back_text: MyString
+  back_image: MyString
+  hint: MyString
+  likes: 1
+  dislikes: 1
+
+two:
+  title: MyString
+  front_text: MyString
+  front_image: MyString
+  question: MyString
+  back_text: MyString
+  back_image: MyString
+  hint: MyString
+  likes: 1
+  dislikes: 1
