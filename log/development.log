@@ -4171,3 +4171,92 @@ Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674
 
 
 Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 20:15:20 -0500
+  [1m[36m (5061.6ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (149.8ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (913.1ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.8ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (26.2ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.8ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "\"I have many leatherbound books\""], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 01:36:08.331096"], ["updated_at", "2016-02-14 01:36:08.331096"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 01:36:08.365561"], ["updated_at", "2016-02-14 01:36:08.365561"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 01:36:08.368599"], ["updated_at", "2016-02-14 01:36:08.368599"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 01:36:08.371365"], ["updated_at", "2016-02-14 01:36:08.371365"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2016-02-13 20:36:12 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (13.8ms)
+Completed 200 OK in 142ms (Views: 134.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/application.self-977a2af4513e48c5bd7c7d31e4437e75adde002f3fb28c3ba76efca6c5d54fa0.css?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/movies.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 20:36:13 -0500
+
+
+Started GET "/" for ::1 at 2016-02-13 20:39:31 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 181ms (Views: 179.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.self-b60acab5af8d245ed2b3012f77d11d8d207d8eada27756badaf4ef05770d60f6.css?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/application.self-977a2af4513e48c5bd7c7d31e4437e75adde002f3fb28c3ba76efca6c5d54fa0.css?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 20:39:31 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 20:39:31 -0500
