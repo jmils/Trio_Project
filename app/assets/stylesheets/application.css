@@ -211,6 +211,90 @@ p {
   text-align: left;
 }
 
+<<<<<<< HEAD
+.container {
+    position: absolute;
+    -webkit-perspective: 1000;
+    -moz-perspective: 1000;
+}
+
+.page1 {
+    width: 300px;
+    height: 300px;
+    background: red;
+    position: relative;
+}
+
+.page2 {
+    width: 300px;
+    height: 300px;
+    background: blue;
+    position: relative;
+    display: none;
+}
+
+.flip {
+    -webkit-backface-visibility:hidden;
+    -webkit-transform:translateX(0);
+    -moz-backface-visibility:hidden;
+    -moz-transform:translateX(0);
+}
+.flip.out {
+    -webkit-transform: rotateY(-180deg) scale(.9);
+    -webkit-animation-name: flipouttoleft;
+    -webkit-animation-duration: 1000ms;
+    -moz-transform: rotateY(-180deg) scale(.9);
+    -moz-animation-name: flipouttoleft;
+    -moz-animation-duration: 1000ms;
+}
+.flip.in {
+    -webkit-animation-name: flipintoright;
+    -webkit-animation-duration: 1000ms;
+    -moz-animation-name: flipintoright;
+    -moz-animation-duration: 1000ms;
+}
+.flip.out.reverse {
+    -webkit-transform: rotateY(90deg) scale(.9);
+    -webkit-animation-name: flipouttoright;
+    -moz-transform: rotateY(90deg) scale(.9);
+    -moz-animation-name: flipouttoright;
+}
+.flip.in.reverse {
+    -webkit-animation-name: flipintoleft;
+    -moz-animation-name: flipintoleft;
+}
+@-webkit-keyframes flipouttoleft {
+    from { -webkit-transform: rotateY(0); }
+    to { -webkit-transform: rotateY(-90deg) scale(.9); }
+}
+@-moz-keyframes flipouttoleft {
+    from { -moz-transform: rotateY(0); }
+    to { -moz-transform: rotateY(-90deg) scale(.9); }
+}
+@-webkit-keyframes flipouttoright {
+    from { -webkit-transform: rotateY(0) ; }
+    to { -webkit-transform: rotateY(90deg) scale(.9); }
+}
+@-moz-keyframes flipouttoright {
+    from { -moz-transform: rotateY(0); }
+    to { -moz-transform: rotateY(90deg) scale(.9); }
+}
+@-webkit-keyframes flipintoleft {
+    from { -webkit-transform: rotateY(-90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@-moz-keyframes flipintoleft {
+    from { -moz-transform: rotateY(-90deg) scale(.9); }
+    to { -moz-transform: rotateY(0); }
+}
+@-webkit-keyframes flipintoright {
+    from { -webkit-transform: rotateY(90deg) scale(.9); }
+    to { -webkit-transform: rotateY(0); }
+}
+@-moz-keyframes flipintoright {
+    from { -moz-transform: rotateY(90deg) scale(.9); }
+    to { -moz-transform: rotateY(0); }
+=======
 .card .front {
   background: #096AA3;
 }
@@ -250,4 +334,5 @@ p {
 img {
   width: 100%;
   height: auto;
+>>>>>>> master
 }

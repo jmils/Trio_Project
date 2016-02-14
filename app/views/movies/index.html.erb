@@ -37,9 +37,9 @@ $('#go').click(function() {
     </div>
   </div>
 
+  <%title = movie.title.downcase.gsub " ", "_" %>
 
-
-
+  <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a>
 
   </div>
   <div class="box"></div>
