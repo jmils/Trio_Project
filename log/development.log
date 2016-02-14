@@ -13176,3 +13176,72 @@ Started GET "/assets/movies.self-bff4406905be9e37270c5dd89ad8dc930303780d08ce51d
 
 
 Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 16:03:01 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 17:16:16 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.2ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (128.4ms)
+Completed 200 OK in 1991ms (Views: 1736.5ms | ActiveRecord: 112.9ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/application.self-db3ea0314b6a0c5aa891efd633471b45c2185729fe0b0d2d63f794a9b384d0a5.css?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/movies.self-bff4406905be9e37270c5dd89ad8dc930303780d08ce51d0a9305111e59ae0af.js?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 17:16:20 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 17:17:12 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 99ms (Views: 97.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/application.self-bd9ffc420ad41610cf0f2a6038dc2058e327fdc937af0da5eba26798dc481ea2.css?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/movies.self-bff4406905be9e37270c5dd89ad8dc930303780d08ce51d0a9305111e59ae0af.js?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/bootstrap" for ::1 at 2016-02-14 17:17:13 -0500
+
+
+Started GET "/assets/bootstrap-sprockets" for ::1 at 2016-02-14 17:17:16 -0500
