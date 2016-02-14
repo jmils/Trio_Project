@@ -15,19 +15,28 @@ $('#go').click(function() {
 
 <% @movies.each do |movie| %>
 
- <div class="flip-3d" onclick="flip">
-  <figure>
+ <div class="wrapper cards">
+   <div class="container">
+     <div class="card">
+        <div class=front>
     <% if movie.front_text? %>
-      <p>"<%= movie.front_text%>"</p>
-      <% end %>
-    <% if movie.front_image? %>
-      <img src="<%= movie.front_image %>" alt="">
-      <% end %>
-    <figcaption>
+
+        <p>"<%= movie.front_text%>"</p>
+        <% end %>
+      <% if movie.front_image? %>
+        <img src="<%= movie.front_image %>" alt="">
+        <% end %>
+    </div>
+    <div class="back">
+      <div class="content">
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
-    </figcaption>
-  </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
 
 
 
@@ -47,7 +56,7 @@ $('#go').click(function() {
           <div class="front"><p>About me<p></div>
           <div class="back">
             <div class="content">
-              <h3 class="cardTitle">Who am I?</h3>
+              <h3 class="cardTitle"></h3>
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate blandit, libero nulla bibendum quam.</p>
             </div>
           </div>

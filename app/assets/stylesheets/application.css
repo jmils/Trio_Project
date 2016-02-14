@@ -61,38 +61,7 @@
 */
 
 
-* { box-sizing: border-box; }
-body {
-  font-family: Avenir, Arial, sans-serif; margin: 8%;
-}
 
-div.flip-3d {
-  perspective: 1200px; width: 30%; float: left;
-}
-
-div.flip-3d figure {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: 1s transform;
-  font-size: 1.6rem;
-  background-color: white;
-}
-
-div.flip-3d figure img {
-  width: 100%;
-}
-
-div.flip-3d figure figcaption {
-  position: absolute;
-  width: 100%; height: 100%; top: 0;
-  transform: rotateY(.5turn) translateZ(1px);
-  background: rgba(255,255,255,0.9);
-  text-align: center;
-  padding-top: 0%;
-  opacity: 0.6;
-  transition: 1s .5s opacity;
-  backface-visibility: hidden;
-}
 /*
 div.flip-3d:hover figure { transform: rotateY(.5turn); }
 div.flip-3d:hover figure figcaption { opacity: 1; }
@@ -103,16 +72,6 @@ div.flip-3d figure:after {
   background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
 }*/
 
-@media screen and (max-width: 800px) {
-    div#flip-3d { perspective-origin: center top; }
-	div#flip-3d figure {
-    float: none;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 12vw;
-  }
-	div#flip-3d figure:last-child { display: none; }
-}
 
 
 
@@ -120,7 +79,7 @@ div.flip-3d figure:after {
 
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 
-body {
+/*body {
   font-family: 'Roboto Slab', serif;
   font-weight: 300;
   font-size: 16px;
@@ -143,7 +102,7 @@ h2, h3 {
 
 p {
   margin-bottom: 1em;
-}
+}*/
 
 .animation {
   -webkit-transition: all 0.3s ease;
@@ -162,7 +121,7 @@ p {
 
 .wrapper.cards {
   background: 0;
-  width: 88%;
+  width: 35em;
   padding: 20px 0 0 0;
 }
 
@@ -186,7 +145,7 @@ p {
 }
 
 .card {
-  width: 100%;
+  width: 80%;
   height: 100%;
   position: absolute;
   cursor: pointer;
@@ -201,12 +160,18 @@ p {
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
+/*.card img {
+  width: 100%;
+  height: 100%;
+}*/
 
 .card.flipped {
   -webkit-transform: rotateY( 180deg );
   -moz-transform: rotateY( 180deg );
   -o-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
+  width: 80%;
+  height: 100%
 }
 
 .card .front,
@@ -228,7 +193,7 @@ p {
 }
 
 .card .back {
-  width: 94%;
+  width: 100%;
   padding-left: 3%;
   padding-right: 3%;
   font-size: 16px;
@@ -276,4 +241,13 @@ p {
   padding: 4%;
   font-weight: 100;
   text-align: left;
+}
+
+/*.content img {
+  width: 100%;
+  height: 50%;
+}*/
+img {
+  width: 100%;
+  height: auto;
 }
