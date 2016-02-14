@@ -3,9 +3,16 @@
   They will automatically be included in application.css.
 */
 h1 {
-  text-align: center;
+  text-align: left;
   font-size: 4rem;
+  display: inline-block;
 }
+
+h2 {
+  text-align: center;
+  font-size: 2rem;
+}
+
 
 /*.box {
 	width: 300px;
