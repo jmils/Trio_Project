@@ -1,9 +1,10 @@
 
+<h1>Guess The Movie</h1>
+
 <% @movies.each do |movie| %>
 
  <div class="flip-3d">
   <figure>
-    <h4><%= movie.question %></h4>
     <% if movie.front_text? %>
       <p>"<%= movie.front_text%>"</p>
       <% end %>
