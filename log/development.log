@@ -4516,3 +4516,706 @@ Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674
 
 
 Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 21:18:06 -0500
+  [1m[36m (5073.0ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (200.2ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (43.1ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (1613.8ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (5.2ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (27.6ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (20.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.603344"], ["updated_at", "2016-02-14 02:27:15.603344"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.626767"], ["updated_at", "2016-02-14 02:27:15.626767"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.629828"], ["updated_at", "2016-02-14 02:27:15.629828"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.632737"], ["updated_at", "2016-02-14 02:27:15.632737"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.635487"], ["updated_at", "2016-02-14 02:27:15.635487"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.638204"], ["updated_at", "2016-02-14 02:27:15.638204"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.640707"], ["updated_at", "2016-02-14 02:27:15.640707"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.643234"], ["updated_at", "2016-02-14 02:27:15.643234"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:27:15.645400"], ["updated_at", "2016-02-14 02:27:15.645400"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 21:27:34 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.8ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 247ms (Views: 240.6ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 21:27:34 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.3ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (12.3ms)[0m  [1mSELECT t2.oid::regclass::text AS to_table, a1.attname AS column, a2.attname AS primary_key, c.conname AS name, c.confupdtype AS on_update, c.confdeltype AS on_delete
+FROM pg_constraint c
+JOIN pg_class t1 ON c.conrelid = t1.oid
+JOIN pg_class t2 ON c.confrelid = t2.oid
+JOIN pg_attribute a1 ON a1.attnum = c.conkey[1] AND a1.attrelid = t1.oid
+JOIN pg_attribute a2 ON a2.attnum = c.confkey[1] AND a2.attrelid = t2.oid
+JOIN pg_namespace t3 ON c.connamespace = t3.oid
+WHERE c.contype = 'f'
+  AND t1.relname = 'movies'
+  AND t3.nspname = ANY (current_schemas(false))
+ORDER BY c.conname
+[0m
+  [1m[36m (5070.3ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (113.1ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (799.0ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.3ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (55.9ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.4ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.4ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.288216"], ["updated_at", "2016-02-14 02:29:07.288216"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.311157"], ["updated_at", "2016-02-14 02:29:07.311157"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.314353"], ["updated_at", "2016-02-14 02:29:07.314353"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.317713"], ["updated_at", "2016-02-14 02:29:07.317713"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.320634"], ["updated_at", "2016-02-14 02:29:07.320634"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.322869"], ["updated_at", "2016-02-14 02:29:07.322869"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.324923"], ["updated_at", "2016-02-14 02:29:07.324923"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.326815"], ["updated_at", "2016-02-14 02:29:07.326815"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "title"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:29:07.328704"], ["updated_at", "2016-02-14 02:29:07.328704"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 21:29:10 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.2ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (19.4ms)
+Completed 200 OK in 127ms (Views: 118.1ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 21:29:10 -0500
+  [1m[36m (5062.4ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (266.2ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (831.0ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.3ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.9ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.176797"], ["updated_at", "2016-02-14 02:32:07.176797"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.199869"], ["updated_at", "2016-02-14 02:32:07.199869"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.202795"], ["updated_at", "2016-02-14 02:32:07.202795"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.205470"], ["updated_at", "2016-02-14 02:32:07.205470"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.207826"], ["updated_at", "2016-02-14 02:32:07.207826"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.209904"], ["updated_at", "2016-02-14 02:32:07.209904"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.213443"], ["updated_at", "2016-02-14 02:32:07.213443"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.215981"], ["updated_at", "2016-02-14 02:32:07.215981"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", ""], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:32:07.217823"], ["updated_at", "2016-02-14 02:32:07.217823"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 21:32:10 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.8ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 129ms (Views: 122.3ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 21:32:11 -0500
+  [1m[36m (5064.1ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (670.4ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (23.7ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (3231.8ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.8ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (59.2ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.1ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.0ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (2.0ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.021618"], ["updated_at", "2016-02-14 02:56:56.021618"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.032860"], ["updated_at", "2016-02-14 02:56:56.032860"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.034893"], ["updated_at", "2016-02-14 02:56:56.034893"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.036860"], ["updated_at", "2016-02-14 02:56:56.036860"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.038726"], ["updated_at", "2016-02-14 02:56:56.038726"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.040772"], ["updated_at", "2016-02-14 02:56:56.040772"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.042936"], ["updated_at", "2016-02-14 02:56:56.042936"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.044746"], ["updated_at", "2016-02-14 02:56:56.044746"]]
+  [1m[36m (0.6ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.046784"], ["updated_at", "2016-02-14 02:56:56.046784"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://imgur.com/RN7T6Hl"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://imgur.com/3B0tdKY"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.048634"], ["updated_at", "2016-02-14 02:56:56.048634"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://imgur.com/3muETuv"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 02:56:56.050433"], ["updated_at", "2016-02-14 02:56:56.050433"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (5062.4ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (942.3ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (6910.2ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.5ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (15.5ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (27.9ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (188.2ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (312.2ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.8ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (11.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.087210"], ["updated_at", "2016-02-14 03:09:03.087210"]]
+  [1m[35m (25.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.123372"], ["updated_at", "2016-02-14 03:09:03.123372"]]
+  [1m[36m (7.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.133896"], ["updated_at", "2016-02-14 03:09:03.133896"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.137458"], ["updated_at", "2016-02-14 03:09:03.137458"]]
+  [1m[36m (11.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.151946"], ["updated_at", "2016-02-14 03:09:03.151946"]]
+  [1m[35m (25.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.179710"], ["updated_at", "2016-02-14 03:09:03.179710"]]
+  [1m[36m (8.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.191111"], ["updated_at", "2016-02-14 03:09:03.191111"]]
+  [1m[35m (9.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.203453"], ["updated_at", "2016-02-14 03:09:03.203453"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.206740"], ["updated_at", "2016-02-14 03:09:03.206740"]]
+  [1m[35m (8.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://imgur.com/RN7T6Hl"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://imgur.com/3B0tdKY"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.217706"], ["updated_at", "2016-02-14 03:09:03.217706"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://imgur.com/3muETuv"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.221615"], ["updated_at", "2016-02-14 03:09:03.221615"]]
+  [1m[35m (10.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.234564"], ["updated_at", "2016-02-14 03:09:03.234564"]]
+  [1m[36m (5.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:09:03.242258"], ["updated_at", "2016-02-14 03:09:03.242258"]]
+  [1m[35m (0.7ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 22:09:18 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (24.2ms)
+Completed 200 OK in 425ms (Views: 412.8ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 22:09:19 -0500
+  [1m[36m (5046.5ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (293.8ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (2246.7ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (138.3ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (174.9ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.2ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (2.6ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (26.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.466743"], ["updated_at", "2016-02-14 03:12:35.466743"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.501331"], ["updated_at", "2016-02-14 03:12:35.501331"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.504472"], ["updated_at", "2016-02-14 03:12:35.504472"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.508091"], ["updated_at", "2016-02-14 03:12:35.508091"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.510713"], ["updated_at", "2016-02-14 03:12:35.510713"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.513290"], ["updated_at", "2016-02-14 03:12:35.513290"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.515700"], ["updated_at", "2016-02-14 03:12:35.515700"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.517740"], ["updated_at", "2016-02-14 03:12:35.517740"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.519685"], ["updated_at", "2016-02-14 03:12:35.519685"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://imgur.com/RN7T6Hl"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://imgur.com/3B0tdKY"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.521827"], ["updated_at", "2016-02-14 03:12:35.521827"]]
+  [1m[36m (0.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://i.imgur.com/3muETuv.jpg"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.523964"], ["updated_at", "2016-02-14 03:12:35.523964"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://imgur.com/KT8ZfI2"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://imgur.com/9S4kJQP"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.525800"], ["updated_at", "2016-02-14 03:12:35.525800"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:12:35.527552"], ["updated_at", "2016-02-14 03:12:35.527552"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 22:12:52 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.7ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 120ms (Views: 111.4ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 22:12:53 -0500
+  [1m[36m (5054.8ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (512.3ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.8ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (1213.3ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.6ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (6.6ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (10.4ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.5ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.370014"], ["updated_at", "2016-02-14 03:13:26.370014"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.391785"], ["updated_at", "2016-02-14 03:13:26.391785"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.393891"], ["updated_at", "2016-02-14 03:13:26.393891"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.395800"], ["updated_at", "2016-02-14 03:13:26.395800"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.397792"], ["updated_at", "2016-02-14 03:13:26.397792"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.399775"], ["updated_at", "2016-02-14 03:13:26.399775"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.401597"], ["updated_at", "2016-02-14 03:13:26.401597"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.403396"], ["updated_at", "2016-02-14 03:13:26.403396"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.405235"], ["updated_at", "2016-02-14 03:13:26.405235"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://imgur.com/RN7T6Hl"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://imgur.com/3B0tdKY"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.407126"], ["updated_at", "2016-02-14 03:13:26.407126"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://i.imgur.com/3muETuv.jpg"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.408934"], ["updated_at", "2016-02-14 03:13:26.408934"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://imgur.com/KT8ZfI2"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://imgur.com/9S4kJQP"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.410723"], ["updated_at", "2016-02-14 03:13:26.410723"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:13:26.412535"], ["updated_at", "2016-02-14 03:13:26.412535"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 22:13:56 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.8ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 158ms (Views: 156.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 22:13:56 -0500
+  [1m[36m (5069.1ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (616.9ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.9ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (810.1ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.1ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (7.2ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (7.5ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.1ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (7.5ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.6ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.794579"], ["updated_at", "2016-02-14 03:17:10.794579"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.827674"], ["updated_at", "2016-02-14 03:17:10.827674"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.829715"], ["updated_at", "2016-02-14 03:17:10.829715"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.831719"], ["updated_at", "2016-02-14 03:17:10.831719"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.833657"], ["updated_at", "2016-02-14 03:17:10.833657"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.835579"], ["updated_at", "2016-02-14 03:17:10.835579"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.837597"], ["updated_at", "2016-02-14 03:17:10.837597"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.839716"], ["updated_at", "2016-02-14 03:17:10.839716"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.841679"], ["updated_at", "2016-02-14 03:17:10.841679"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://i.imgur.com/RN7T6Hl.jpg?1"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://i.imgur.com/3B0tdKY.jpg"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.843624"], ["updated_at", "2016-02-14 03:17:10.843624"]]
+  [1m[36m (0.7ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://i.imgur.com/3muETuv.jpg"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.846087"], ["updated_at", "2016-02-14 03:17:10.846087"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:17:10.847994"], ["updated_at", "2016-02-14 03:17:10.847994"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+
+
+Started GET "/" for ::1 at 2016-02-13 22:17:35 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (1.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 160ms (Views: 158.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 22:17:35 -0500
+  [1m[36m (5061.1ms)[0m  [1mDROP DATABASE IF EXISTS "flipflop_development"[0m
+  [1m[35m (141.2ms)[0m  DROP DATABASE IF EXISTS "flipflop_test"
+  [1m[36m (0.6ms)[0m  [1mCREATE DATABASE "flipflop_development" ENCODING = 'unicode'[0m
+  [1m[35m (1129.1ms)[0m  CREATE DATABASE "flipflop_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (4.2ms)[0m  DROP TABLE "movies" CASCADE
+  [1m[36m (7.4ms)[0m  [1mCREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (9.8ms)[0m  CREATE TABLE "movies" ("id" serial primary key, "title" character varying, "front_text" character varying, "front_image" character varying, "question" character varying, "back_text" character varying, "back_image" character varying, "hint" character varying, "likes" integer, "dislikes" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (3.5ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL) [0m
+  [1m[35m (1.6ms)[0m  CREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")
+  [1m[36m (0.4ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (0.6ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20160213154910')
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (1.0ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Anchorman: The Legend of Ron Burgundy"], ["front_text", "I have many leatherbound books"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Anchorman: The Legend of Ron Burgundy"], ["back_image", "http://i.imgur.com/9c8bG9H.jpg"], ["hint", "rich mahogany"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.823151"], ["updated_at", "2016-02-14 03:25:04.823151"]]
+  [1m[35m (0.6ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Billy Madison"], ["front_text", ""], ["front_image", "http://i.imgur.com/U79B7Vk.jpg?1"], ["question", "What is the movie?"], ["back_text", "Billy Madison"], ["back_image", "http://i.imgur.com/exNKIz5.jpg"], ["hint", "back to school"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.846313"], ["updated_at", "2016-02-14 03:25:04.846313"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Dude died in a hang gliding accident. What an idiot."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/hkPfaAqb.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.849072"], ["updated_at", "2016-02-14 03:25:04.849072"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Horrible Bosses"], ["front_text", ""], ["front_image", "http://i.imgur.com/9T26lBH.jpg?1"], ["question", "What is the movie?"], ["back_text", "Horrible Bosses"], ["back_image", "http://i.imgur.com/OX09J2S.jpg"], ["hint", "dentist"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.851809"], ["updated_at", "2016-02-14 03:25:04.851809"]]
+  [1m[36m (0.8ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Tommy Boy"], ["front_text", "Does this suit make me look fat?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/Cv6YFuK.jpg"], ["hint", "Fat guy in a little coat"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.855270"], ["updated_at", "2016-02-14 03:25:04.855270"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Zoolander"], ["front_text", "TODD! Where's my goddamn latté?"], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/bVgTPmB.jpg"], ["hint", "Relax, don't do it."], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.858085"], ["updated_at", "2016-02-14 03:25:04.858085"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Wedding Crashers"], ["front_text", "Don't ever leave me...cause I'd find you."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Wedding  Crashers"], ["back_image", "http://i.imgur.com/oRGnzYZ.jpg"], ["hint", "meatloaf"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.860657"], ["updated_at", "2016-02-14 03:25:04.860657"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Tommy Boy"], ["front_text", ""], ["front_image", "http://i.imgur.com/J84C5ju.jpg?1"], ["question", "What is the movie?"], ["back_text", "Tommy Boy"], ["back_image", "http://i.imgur.com/aM4RKa6.jpg"], ["hint", "Callahan auto parts"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.862740"], ["updated_at", "2016-02-14 03:25:04.862740"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Zoolander"], ["front_text", "Moisture is the essence of wetness, and wetness is the essence of beauty."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Zoolander"], ["back_image", "http://i.imgur.com/EO3Qjjm.jpg"], ["hint", "Merman"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.864753"], ["updated_at", "2016-02-14 03:25:04.864753"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "Mean Girls"], ["front_text", ""], ["front_image", "http://i.imgur.com/RN7T6Hl.jpg?1"], ["question", "What is the movie?"], ["back_text", "Mean Girls"], ["back_image", "http://i.imgur.com/3B0tdKY.jpg"], ["hint", "Burn Book"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.866756"], ["updated_at", "2016-02-14 03:25:04.866756"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Talladega Nights: The Ballad of Ricky Bobby"], ["front_text", "If you're not first you're last."], ["front_image", ""], ["question", "What is the movie?"], ["back_text", "Talladega Nights: The Ballad of Ricky Bobby"], ["back_image", "http://i.imgur.com/3muETuv.jpg"], ["hint", "Wonder Bread"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.868534"], ["updated_at", "2016-02-14 03:25:04.868534"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"  [["title", "21 Jump Street"], ["front_text", ""], ["front_image", "http://i.imgur.com/KT8ZfI2.jpg?1"], ["question", "What is the movie?"], ["back_text", "21 Jump Street"], ["back_image", "http://i.imgur.com/9S4kJQP.jpg"], ["hint", "Infiltrate the dealers. Find the suppliers"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.870293"], ["updated_at", "2016-02-14 03:25:04.870293"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "movies" ("title", "front_text", "front_image", "question", "back_text", "back_image", "hint", "likes", "dislikes", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11) RETURNING "id"[0m  [["title", "Clueless"], ["front_text", ""], ["front_image", "\thttp://i.imgur.com/cNMNdbx.jpg?1"], ["question", "What is the movie?"], ["back_text", "Clueless"], ["back_image", "http://i.imgur.com/bkYHWm6.jpg"], ["hint", "As if"], ["likes", 0], ["dislikes", 0], ["created_at", "2016-02-14 03:25:04.872065"], ["updated_at", "2016-02-14 03:25:04.872065"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+
+
+Started GET "/" for ::1 at 2016-02-13 22:25:43 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (2.3ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 193ms (Views: 185.0ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/application.self-10c6e9ae32c24d6ddc7d001f16565a5aad53d24719e157e008bcbbced26e00a8.css?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/movies.self-0e55d4f52858e4cb8a6c7ccd321fe8d3f778df109d0fb5a12837f3460f76bd4d.css?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674f7de1aef10c34aa37.js?body=1" for ::1 at 2016-02-13 22:25:44 -0500
+
+
+Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 22:25:44 -0500
