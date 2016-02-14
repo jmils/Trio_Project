@@ -61,39 +61,8 @@
 */
 
 
-* { box-sizing: border-box; }
-body {
-  font-family: Avenir, Arial, sans-serif; margin: 8%;
-}
 
-div.flip-3d {
-  perspective: 1200px; width: 30%; float: left;
-}
-
-div.flip-3d figure {
-  position: relative;
-  transform-style: preserve-3d;
-  transition: 1s transform;
-  font-size: 1.6rem;
-  background-color: white;
-}
-
-div.flip-3d figure img {
-  width: 100%;
-}
-
-div.flip-3d figure figcaption {
-  position: absolute;
-  width: 100%; height: 100%; top: 0;
-  transform: rotateY(.5turn) translateZ(1px);
-  background: rgba(255,255,255,0.9);
-  text-align: center;
-  padding-top: 0%;
-  opacity: 0.6;
-  transition: 1s .5s opacity;
-  backface-visibility: hidden;
-}
-
+/*
 div.flip-3d:hover figure { transform: rotateY(.5turn); }
 div.flip-3d:hover figure figcaption { opacity: 1; }
 div.flip-3d figure:after {
@@ -101,15 +70,184 @@ div.flip-3d figure:after {
   height: 8vw; width: 100%;
   transform: rotateX(90deg);
   background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
+}*/
+
+
+
+
+      /*new flip actully works*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+/*body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #333;
+  background: #eee;
 }
 
-@media screen and (max-width: 800px) {
-    div#flip-3d { perspective-origin: center top; }
-	div#flip-3d figure {
-    float: none;
-    width: 50%;
-    margin: 0 auto;
-    margin-bottom: 12vw;
-  }
-	div#flip-3d figure:last-child { display: none; }
+
+h1 {
+  margin: 0.5em 0 1em 0;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #096AA3;
+}
+
+h2, h3 {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1em;
+}*/
+
+.animation {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  width: 80%;
+  padding: 4%;
+  margin: 20px auto;
+  background: #fff;
+}
+
+.wrapper.cards {
+  background: 0;
+  width: 35em;
+  padding: 20px 0 0 0;
+}
+
+.container {
+  position: relative;
+  float: left;
+  width: 48%;
+  height: 260px;
+  margin: 10px 0 10px 4%;
+  background: #fff;
+
+  /* Set the depth of the elements */
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+
+.container:first-child {
+  margin-left: 0;
+}
+
+.card {
+  width: 80%;
+  height: 100%;
+  position: absolute;
+  cursor: pointer;
+
+  /* Set the transition effects */
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+/*.card img {
+  width: 100%;
+  height: 100%;
+}*/
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+  width: 80%;
+  height: 100%
+}
+
+.card .front,
+.card .back {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card .back {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 16px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.formItem:first-child {
+  margin-top: 20px;
+}
+
+.card .back label {
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}
+
+.card .front {
+  background: #096AA3;
+}
+
+.card .back {
+  background: #03446A;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.container:first-child .card .front {
+  background: #228653;
+}
+
+.container:first-child .card .back {
+  background: #007539;
+}
+
+.cardTitle {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.content {
+  padding: 4%;
+  font-weight: 100;
+  text-align: left;
+}
+
+/*.content img {
+  width: 100%;
+  height: 50%;
+}*/
+img {
+  width: 100%;
+  height: auto;
 }

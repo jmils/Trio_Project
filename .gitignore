@@ -4,7 +4,8 @@ Gemfile.lock
 #*.rbc
 #capybara-*.html
 #.rspec
-/log
+
+/log/*
 /tmp/*
 #/db/*.sqlite3
 #/db/*.sqlite3-journal

@@ -1,25 +1,64 @@
+<!-- <script>
+$('#go').click(function() {
+    var page1 = $('.page1');
+    var page2 = $('.page2');
+    var toHide = page1.is(':visible') ? page1 : page2;
+    var toShow = page2.is(':visible') ? page1 : page2;
+
+    toHide.removeClass('flip in').addClass('flip out').hide();
+    toShow.removeClass('flip out').addClass('flip in').show();
+});
+</script> -->
+
 
 <h1>Guess The Movie</h1>
 
 <% @movies.each do |movie| %>
 
- <div class="flip-3d">
-  <figure>
+ <div class="wrapper cards">
+   <div class="container">
+     <div class="card">
+        <div class=front>
     <% if movie.front_text? %>
-      <p>"<%= movie.front_text%>"</p>
-      <% end %>
-    <% if movie.front_image? %>
-      <img src="<%= movie.front_image %>" alt="">
-      <% end %>
-    <figcaption>
+
+        <p>"<%= movie.front_text%>"</p>
+        <% end %>
+      <% if movie.front_image? %>
+        <img src="<%= movie.front_image %>" alt="">
+        <% end %>
+    </div>
+    <div class="back">
+      <div class="content">
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
-    </figcaption>
-  </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
-  <a href="<%= @omdb %>"><button type="button">TEST</button></a>
+
+
 
 
   </div>
+  <div class="box"></div>
+
+
 
 <% end %>
+
+
+    <!-- <script src="javascript/movies.js"></script> -->
+    <div class="wrapper cards">
+      <div class="container">
+        <div class="card">
+          <div class="front"><p>About me<p></div>
+          <div class="back">
+            <div class="content">
+              <h3 class="cardTitle"></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate blandit, libero nulla bibendum quam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
