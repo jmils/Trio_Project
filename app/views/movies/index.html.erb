@@ -1,9 +1,21 @@
+<!-- <script>
+$('#go').click(function() {
+    var page1 = $('.page1');
+    var page2 = $('.page2');
+    var toHide = page1.is(':visible') ? page1 : page2;
+    var toShow = page2.is(':visible') ? page1 : page2;
+
+    toHide.removeClass('flip in').addClass('flip out').hide();
+    toShow.removeClass('flip out').addClass('flip in').show();
+});
+</script> -->
+
 
 <h1>Guess The Movie</h1>
 
 <% @movies.each do |movie| %>
 
- <div class="flip-3d">
+ <div class="flip-3d" onclick="flip">
   <figure>
     <% if movie.front_text? %>
       <p>"<%= movie.front_text%>"</p>
@@ -21,5 +33,19 @@
 
 
   </div>
+  <div class="box"></div>
+
+
 
 <% end %>
+
+<button type="button" id="go">FLIP</button>
+<div class="container">
+    <div class="page1">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod mauris metus, ac consectetur felis. Cras consectetur, est vel malesuada faucibus, ligula enim suscipit elit, ut ornare quam urna quis felis. In hac habitasse platea dictumst.
+    </div>
+    <div class="page2">
+    Lorem ipsum
+    </div>
+    <!-- <script src="javascript/movies.js"></script> -->
+</div>
