@@ -10726,3 +10726,407 @@ NameError (uninitialized constant MoviesController::HTTParty):
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
   Rendered /usr/local/lib/ruby/gems/2.3.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (344.5ms)
 >>>>>>> a43bc955e542fe67e45b99656bd7f13b576e7bc0
+
+
+Started GET "/" for ::1 at 2016-02-14 14:22:45 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.9ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (73.3ms)
+Completed 200 OK in 1265ms (Views: 1189.7ms | ActiveRecord: 57.5ms)
+
+
+Started GET "/assets/movies.self-75a2d2ee645a2442dfc83f36bc18f64934e2c44b3892b9e9613c7d028cbd526b.js?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/application.self-8546eef98c419d217d4712ed4dc5badc1e50badfb0cae10dba25af6567b73a29.css?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:22:48 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:22:49 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:22:49 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:23:21 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.7ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 268ms (Views: 267.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/movies.self-9fec099bfb5c239da78addf7404bc99a6194283b2df0dfc81ae0f11680da0e21.js?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/application.self-8546eef98c419d217d4712ed4dc5badc1e50badfb0cae10dba25af6567b73a29.css?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:23:22 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:23:38 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (8.5ms)
+Completed 200 OK in 106ms (Views: 104.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:23:38 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:23:38 -0500
+
+
+Started GET "/assets/application.self-8546eef98c419d217d4712ed4dc5badc1e50badfb0cae10dba25af6567b73a29.css?body=1" for ::1 at 2016-02-14 14:23:38 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:23:39 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:23:39 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:23:39 -0500
+
+
+Started GET "/assets/movies.self-5e45c4ec5d6acc12ccf4c727ff7bf1317207460e0588e4d7f25283f205a72099.js?body=1" for ::1 at 2016-02-14 14:23:39 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:23:39 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:30:01 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (1.1ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 504ms (Views: 496.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/application.self-a7b6c81f7a71344726ee849f8c6b2e505452a4c224cac707abfa8a6cf474adbc.css?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/movies.self-47ad645be10a538a73e19ea0ee8cd4511a6179fe3d897115ca8cdf63368f5d8d.js?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:30:02 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:30:29 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 70ms (Views: 69.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/application.self-a7b6c81f7a71344726ee849f8c6b2e505452a4c224cac707abfa8a6cf474adbc.css?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/assets/movies.self-47ad645be10a538a73e19ea0ee8cd4511a6179fe3d897115ca8cdf63368f5d8d.js?body=1" for ::1 at 2016-02-14 14:30:29 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:31:25 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 95ms (Views: 94.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/application.self-91f7b15c4b1d2c5d65788639f82b890921a2cdb936eb9e2165fcedecdb0cc789.css?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/movies.self-47ad645be10a538a73e19ea0ee8cd4511a6179fe3d897115ca8cdf63368f5d8d.js?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:31:25 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:32:32 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 95ms (Views: 93.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/application.self-91f7b15c4b1d2c5d65788639f82b890921a2cdb936eb9e2165fcedecdb0cc789.css?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/movies.self-47ad645be10a538a73e19ea0ee8cd4511a6179fe3d897115ca8cdf63368f5d8d.js?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:32:32 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:35:13 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 284ms (Views: 282.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/application.self-91f7b15c4b1d2c5d65788639f82b890921a2cdb936eb9e2165fcedecdb0cc789.css?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/movies.self-436877cbc196a7d57b2421d810c940ba2af9e670451fb6d2dfe7daef45883e69.js?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:35:13 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:35:36 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 71ms (Views: 69.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:35:36 -0500
+
+
+Started GET "/assets/application.self-08f502d94eecf984f4d903198a39310b60689d7219040dbad7d1920f0544c368.css?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/movies.self-436877cbc196a7d57b2421d810c940ba2af9e670451fb6d2dfe7daef45883e69.js?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:35:37 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:36:42 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.6ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 258ms (Views: 256.2ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/application.self-08f502d94eecf984f4d903198a39310b60689d7219040dbad7d1920f0544c368.css?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/movies.self-da5f8d144978832e7aac5dc2ccae25eab81c6a3e34f4d9e1cb4761285d1472c3.js?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:36:43 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:38:21 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.6ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 298ms (Views: 296.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/movies.self-ef8227abb1f9118d43f8a4136a0414ce710b0460e200777834535552768b1686.js?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/application.self-08f502d94eecf984f4d903198a39310b60689d7219040dbad7d1920f0544c368.css?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:38:21 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:39:00 -0500
+Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies"[0m
+  Rendered movies/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 94ms (Views: 92.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/movies.self-bf426338f1f45a1144bead67aa8da396c6019be0ae8fe8f0b11c1da176f57208.js?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/application.self-08f502d94eecf984f4d903198a39310b60689d7219040dbad7d1920f0544c368.css?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:39:00 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 14:40:28 -0500
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (0.5ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 89ms (Views: 87.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/movies.self-e22c4ac4b767a1e2609bfe0854fe45b99b1becbf070f073f654bbfa2e20062f4.css?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/movies.self-07991dddba8b23b3972c9992636b1a26f6bd7f9a121a4b2d328022ed86755304.js?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/scaffold.self-83b741db49389dc7cfdf85bf7537a0219cce48e085c4116afc83d55c9af47c78.css?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/application.self-08f502d94eecf984f4d903198a39310b60689d7219040dbad7d1920f0544c368.css?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/jquery.self-c64a74367bda6ef8b860f19e74df08927ca99d2be2ac934e9e92d5fd361e0da4.js?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d602bdfe68ffc63b9f9cc512872aa3cfff046228a0a36e90dd476e8ef54c1b09.js?body=1" for ::1 at 2016-02-14 14:40:28 -0500
+
+
+Started GET "/assets/application.self-b0df7c75a7a8a0ed9a589a09da7cf1af4651068f4f48c89e88648133052ebee5.js?body=1" for ::1 at 2016-02-14 14:40:28 -0500
