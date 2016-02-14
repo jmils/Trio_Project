@@ -29,7 +29,10 @@ $('#go').click(function() {
     </figcaption>
   </figure>
 
-  <a href="<%= @omdb %>"><button type="button">TEST</button></a>
+  <%title = movie.title.downcase.gsub " ", "_" %>
+
+  <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a>
+
 
 
   </div>

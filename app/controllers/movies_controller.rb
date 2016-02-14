@@ -5,7 +5,6 @@ class MoviesController < ApplicationController
   # GET /movies.json
   def index
     @movies = Movie.all
-    @omdb = HTTParty.get("http://www.omdbapi.com/?t=#{movies.title}")
   end
 
   # GET /movies/1

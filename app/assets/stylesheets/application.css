@@ -150,10 +150,10 @@ div.flip-3d figure:after {
     -moz-transform:translateX(0);
 }
 .flip.out {
-    -webkit-transform: rotateY(-90deg) scale(.9);
+    -webkit-transform: rotateY(-180deg) scale(.9);
     -webkit-animation-name: flipouttoleft;
     -webkit-animation-duration: 1000ms;
-    -moz-transform: rotateY(-90deg) scale(.9);
+    -moz-transform: rotateY(-180deg) scale(.9);
     -moz-animation-name: flipouttoleft;
     -moz-animation-duration: 1000ms;
 }
