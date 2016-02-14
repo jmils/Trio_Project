@@ -27,7 +27,17 @@ movies = Movie.create([{ title: 'Anchorman: The Legend of Ron Burgundy', front_t
 
 	{ title: '21 Jump Street', front_text: "", front_image: "http://i.imgur.com/KT8ZfI2.jpg?1", question: "What is the movie?", back_text: '21 Jump Street', back_image: "http://i.imgur.com/9S4kJQP.jpg", hint: "Infiltrate the dealers. Find the suppliers", likes: 0, dislikes: 0},
 
-		{ title: 'Clueless', front_text: "", front_image: "	http://i.imgur.com/cNMNdbx.jpg?1", question: "What is the movie?", back_text: 'Clueless', back_image: "http://i.imgur.com/bkYHWm6.jpg", hint: "As if!", likes: 0, dislikes: 0},
+	{ title: 'Clueless', front_text: "", front_image: "http://i.imgur.com/cNMNdbx.jpg?1", question: "What is the movie?", back_text: 'Clueless', back_image: "http://i.imgur.com/bkYHWm6.jpg", hint: "As if!", likes: 0, dislikes: 0},
+
+	{ title: 'Dumb and Dumber', front_text: "", front_image: "http://i.imgur.com/MWqNYYH.jpg?1", question: "What is the movie?", back_text: 'Dumb and Dumber', back_image: "http://i.imgur.com/eZlmxEL.jpg", hint: "Shaggin Wagon", likes: 0, dislikes: 0},
+
+	{ title: 'Caddyshack', front_text: "In order to conquer an animal, I have to think like an animal, and whenever possible, look like one", front_image: "", question: "What is the movie?", back_text: 'Caddyshack', back_image: "http://i.imgur.com/OIrNHMP.png?1", hint: "Shaggin Wagon", likes: 0, dislikes: 0},
+
+	{ title: 'Animal House', front_text: "Was it over when the Germans bombed Pearl Harbor?", front_image: "", question: "What is the movie?", back_text: 'Animal House', back_image: "http://i.imgur.com/sZkD8MF.gif", hint: "", likes: 0, dislikes: 0},
+
+	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spallballs', back_image: "http://i.imgur.com/Lruxbzm.jpg", hint: "", likes: 0, dislikes: 0},
+
+	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Bl.jpg", hint: "", likes: 0, dislikes: 0},
 
 
 	])
