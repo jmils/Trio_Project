@@ -4,9 +4,13 @@
  <div class="flip-3d">
   <figure>
     <h4><%= movie.question %></h4>
-    <p>"<%= movie.front_text%>"</p>
-    <img src="<%= movie.front_image %>" alt="">
-    <figcaption> 
+    <% if movie.front_text? %>
+      <p>"<%= movie.front_text%>"</p>
+      <% end %>
+    <% if movie.front_image? %>
+      <img src="<%= movie.front_image %>" alt="">
+      <% end %>
+    <figcaption>
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
     </figcaption>
