@@ -35,7 +35,7 @@ movies = Movie.create([{ title: 'Anchorman: The Legend of Ron Burgundy', front_t
 
 	{ title: 'Animal House', front_text: "Was it over when the Germans bombed Pearl Harbor?", front_image: "", question: "What is the movie?", back_text: 'Animal House', back_image: "http://i.imgur.com/sZkD8MF.gif", hint: "", likes: 0, dislikes: 0},
 
-	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spallballs', back_image: "http://i.imgur.com/Lruxbzm.jpg", hint: "", likes: 0, dislikes: 0},
+	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spaceballs', back_image: "http://i.imgur.com/Lruxbzm.jpg", hint: "", likes: 0, dislikes: 0},
 
 	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Bl.jpg", hint: "", likes: 0, dislikes: 0},
 
