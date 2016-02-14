@@ -5319,3 +5319,11 @@ Started GET "/assets/movies.self-7441bdfa6f18360430d6dbe09594b5cd6f582859798e674
 
 
 Started GET "/assets/application.self-9f8d644e8c00b5cf1cc05d3e8ffb2ead4bde4cf517b982688bfdb2a3920663c4.js?body=1" for ::1 at 2016-02-13 23:26:55 -0500
+
+
+Started GET "/" for ::1 at 2016-02-14 11:45:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (41.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by MoviesController#index as HTML
+  [1m[35mMovie Load (69.1ms)[0m  SELECT "movies".* FROM "movies"
+  Rendered movies/index.html.erb within layouts/application (200.7ms)
+Completed 200 OK in 755ms (Views: 542.9ms | ActiveRecord: 185.9ms)
