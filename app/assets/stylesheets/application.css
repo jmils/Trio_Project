@@ -114,138 +114,166 @@ div.flip-3d figure:after {
 	div#flip-3d figure:last-child { display: none; }
 }
 
-/*practive new flip method*/
 
-.page1,.page2 {
-   color: white;
-   padding: 10px;
+
+      /*new flip actully works*/
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
+
+body {
+  font-family: 'Roboto Slab', serif;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 1.4em;
+  color: #333;
+  background: #eee;
 }
-/* end */
+
+
+h1 {
+  margin: 0.5em 0 1em 0;
+  font-size: 1.8em;
+  font-weight: 700;
+  color: #096AA3;
+}
+
+h2, h3 {
+  font-weight: bold;
+}
+
+p {
+  margin-bottom: 1em;
+}
+
+.animation {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  width: 80%;
+  padding: 4%;
+  margin: 20px auto;
+  background: #fff;
+}
+
+.wrapper.cards {
+  background: 0;
+  width: 88%;
+  padding: 20px 0 0 0;
+}
 
 .container {
-    position: absolute;
-    -webkit-perspective: 1000;
-    -moz-perspective: 1000;
+  position: relative;
+  float: left;
+  width: 48%;
+  height: 260px;
+  margin: 10px 0 10px 4%;
+  background: #fff;
+
+  /* Set the depth of the elements */
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
 }
 
-.page1 {
-    width: 300px;
-    height: 300px;
-    background: red;
-    position: relative;
-}
-
-.page2 {
-    width: 300px;
-    height: 300px;
-    background: blue;
-    position: relative;
-    display: none;
-}
-
-.flip {
-    -webkit-backface-visibility:hidden;
-    -webkit-transform:translateX(0);
-    -moz-backface-visibility:hidden;
-    -moz-transform:translateX(0);
-}
-.flip.out {
-    -webkit-transform: rotateY(-90deg) scale(.9);
-    -webkit-animation-name: flipouttoleft;
-    -webkit-animation-duration: 1000ms;
-    -moz-transform: rotateY(-90deg) scale(.9);
-    -moz-animation-name: flipouttoleft;
-    -moz-animation-duration: 1000ms;
-}
-.flip.in {
-    -webkit-animation-name: flipintoright;
-    -webkit-animation-duration: 1000ms;
-    -moz-animation-name: flipintoright;
-    -moz-animation-duration: 1000ms;
-}
-.flip.out.reverse {
-    -webkit-transform: rotateY(90deg) scale(.9);
-    -webkit-animation-name: flipouttoright;
-    -moz-transform: rotateY(90deg) scale(.9);
-    -moz-animation-name: flipouttoright;
-}
-.flip.in.reverse {
-    -webkit-animation-name: flipintoleft;
-    -moz-animation-name: flipintoleft;
-}
-@-webkit-keyframes flipouttoleft {
-    from { -webkit-transform: rotateY(0); }
-    to { -webkit-transform: rotateY(-90deg) scale(.9); }
-}
-@-moz-keyframes flipouttoleft {
-    from { -moz-transform: rotateY(0); }
-    to { -moz-transform: rotateY(-90deg) scale(.9); }
-}
-@-webkit-keyframes flipouttoright {
-    from { -webkit-transform: rotateY(0) ; }
-    to { -webkit-transform: rotateY(90deg) scale(.9); }
-}
-@-moz-keyframes flipouttoright {
-    from { -moz-transform: rotateY(0); }
-    to { -moz-transform: rotateY(90deg) scale(.9); }
-}
-@-webkit-keyframes flipintoleft {
-    from { -webkit-transform: rotateY(-90deg) scale(.9); }
-    to { -webkit-transform: rotateY(0); }
-}
-@-moz-keyframes flipintoleft {
-    from { -moz-transform: rotateY(-90deg) scale(.9); }
-    to { -moz-transform: rotateY(0); }
-}
-@-webkit-keyframes flipintoright {
-    from { -webkit-transform: rotateY(90deg) scale(.9); }
-    to { -webkit-transform: rotateY(0); }
-}
-@-moz-keyframes flipintoright {
-    from { -moz-transform: rotateY(90deg) scale(.9); }
-    to { -moz-transform: rotateY(0); }
+.container:first-child {
+  margin-left: 0;
 }
 
 .card {
-  position: relative;
-  float: left;
-  padding-bottom: 25%;
-  width: 25%;
-  text-align: center;
-}
-
-.card__front,
-.card__back {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
+  position: absolute;
+  cursor: pointer;
+
+  /* Set the transition effects */
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
 }
 
-.card__front,
-.card__back {
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.card .front,
+.card .back {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  position: absolute;
   -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transition: -webkit-transform 0.3s;
-          transition: transform 0.3s;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
 }
 
-.card__front {
-  background-color: #ff5078;
+.card .back {
+  width: 94%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 16px;
+  text-align: left;
+  line-height: 25px;
 }
 
-.card__back {
-  background-color: #1e1e1e;
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
-}
-.card.effect__click.flipped .card__front {
-  -webkit-transform: rotateY(-180deg);
-          transform: rotateY(-180deg);
+.formItem:first-child {
+  margin-top: 20px;
 }
 
-.card.effect__click.flipped .card__back {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
+.card .back label {
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}
+
+.card .front {
+  background: #096AA3;
+}
+
+.card .back {
+  background: #03446A;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.container:first-child .card .front {
+  background: #228653;
+}
+
+.container:first-child .card .back {
+  background: #007539;
+}
+
+.cardTitle {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.content {
+  padding: 4%;
+  font-weight: 100;
+  text-align: left;
 }
