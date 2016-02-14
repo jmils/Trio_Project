@@ -15,24 +15,37 @@ $('#go').click(function() {
 
 <% @movies.each do |movie| %>
 
- <div class="flip-3d" onclick="flip">
-  <figure>
+ <div class="wrapper cards">
+   <div class="container">
+     <div class="card">
+        <div class=front>
     <% if movie.front_text? %>
-      <p>"<%= movie.front_text%>"</p>
-      <% end %>
-    <% if movie.front_image? %>
-      <img src="<%= movie.front_image %>" alt="">
-      <% end %>
-    <figcaption>
+
+        <p>"<%= movie.front_text%>"</p>
+        <% end %>
+      <% if movie.front_image? %>
+        <img src="<%= movie.front_image %>" alt="">
+        <% end %>
+    </div>
+    <div class="back">
+      <div class="content">
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
-    </figcaption>
-  </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 
+
+
+<<<<<<< HEAD
   <%title = movie.title.downcase.gsub " ", "_" %>
 
   <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a>
 
+=======
+>>>>>>> master
 
 
   </div>
@@ -42,13 +55,17 @@ $('#go').click(function() {
 
 <% end %>
 
-<button type="button" id="go">FLIP</button>
-<div class="container">
-    <div class="page1">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque euismod mauris metus, ac consectetur felis. Cras consectetur, est vel malesuada faucibus, ligula enim suscipit elit, ut ornare quam urna quis felis. In hac habitasse platea dictumst.
-    </div>
-    <div class="page2">
-    Lorem ipsum
-    </div>
+
     <!-- <script src="javascript/movies.js"></script> -->
-</div>
+    <div class="wrapper cards">
+      <div class="container">
+        <div class="card">
+          <div class="front"><p>About me<p></div>
+          <div class="back">
+            <div class="content">
+              <h3 class="cardTitle"></h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam sodales, mi ac vulputate blandit, libero nulla bibendum quam.</p>
+            </div>
+          </div>
+        </div>
+      </div>
