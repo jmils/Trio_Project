@@ -1,17 +1,7 @@
-<!-- <script>
-$('#go').click(function() {
-    var page1 = $('.page1');
-    var page2 = $('.page2');
-    var toHide = page1.is(':visible') ? page1 : page2;
-    var toShow = page2.is(':visible') ? page1 : page2;
+<div class="center jumbotron">
+  <h1>Guess The Movie</h1>
 
-    toHide.removeClass('flip in').addClass('flip out').hide();
-    toShow.removeClass('flip out').addClass('flip in').show();
-});
-</script> -->
-
-
-<h1>Guess The Movie</h1>
+</div>
 
 <% @movies.each do |movie| %>
 
@@ -31,15 +21,17 @@ $('#go').click(function() {
       <div class="content">
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
+    <%title = movie.title.downcase.gsub " ", "_" %>
+      <center><a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a></center>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <%title = movie.title.downcase.gsub " ", "_" %>
 
-  <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a>
+
+
 
   </div>
   <div class="box"></div>

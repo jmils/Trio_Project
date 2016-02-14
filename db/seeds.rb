@@ -3,7 +3,7 @@
 #
 # Examples:
 #
-movies = Movie.create([{ title: 'Anchorman: The Legend of Ron Burgundy', front_text: "I have many leatherbound books", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9H.jpg", hint: "rich mahogany", likes: 0, dislikes: 0},
+movies = Movie.create([{ title: 'Anchorman', front_text: "I have many leatherbound books", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9H.jpg", hint: "rich mahogany", likes: 0, dislikes: 0},
 
 	{ title: 'Billy Madison', front_text: "", front_image: "http://i.imgur.com/U79B7Vk.jpg?1", question: "What is the movie?", back_text: "Billy Madison", back_image: "http://i.imgur.com/exNKIz5.jpg", hint: "back to school", likes: 0, dislikes: 0},
 
@@ -23,7 +23,7 @@ movies = Movie.create([{ title: 'Anchorman: The Legend of Ron Burgundy', front_t
 
 	{ title: 'Mean Girls', front_text: "", front_image: "http://i.imgur.com/RN7T6Hl.jpg?1", question: "What is the movie?", back_text: 'Mean Girls', back_image: "http://i.imgur.com/3B0tdKY.jpg", hint: "Burn Book", likes: 0, dislikes: 0},
 
-	{ title: 'Talladega Nights: The Ballad of Ricky Bobby', front_text: "If you're not first you're last.", front_image: "", question: "What is the movie?", back_text: 'Talladega Nights: The Ballad of Ricky Bobby', back_image: "http://i.imgur.com/3muETuv.jpg", hint: "Wonder Bread", likes: 0, dislikes: 0},
+	{ title: 'Talladega Nights The Ballad of Ricky Bobby', front_text: "If you're not first you're last.", front_image: "", question: "What is the movie?", back_text: 'Talladega Nights: The Ballad of Ricky Bobby', back_image: "http://i.imgur.com/3muETuv.jpg", hint: "Wonder Bread", likes: 0, dislikes: 0},
 
 	{ title: '21 Jump Street', front_text: "", front_image: "http://i.imgur.com/KT8ZfI2.jpg?1", question: "What is the movie?", back_text: '21 Jump Street', back_image: "http://i.imgur.com/9S4kJQP.jpg", hint: "Infiltrate the dealers. Find the suppliers", likes: 0, dislikes: 0},
 
