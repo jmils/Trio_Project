@@ -227,11 +227,16 @@ p {
 }
 
 .container:first-child .card .front {
-  background: #228653;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f6e6b4), color-stop(100%,#ed9017)); /* webkit */font-size:20px}
+ box-shadow: 0 1px 2px #fff, 0 -1px 1px #666, inset 0 -1px 1px rgba(0,0,0,0.5), inset 0 1px 1px rgba(255,255,255,0.8);
+border-radius: .1em;
 }
 
 .container:first-child .card .back {
-  background: #007539;
+  background: #d1d1d1;
+inset 0px -1px 1px rgba(0,0,0,0.5); /*bottom internal shadow*/
+inset 0px 1px 1px rgba(255,255,255,0.8); /*top internal highlight*/
+border-radius: .1em;
 }
 
 .cardTitle {
@@ -246,11 +251,8 @@ p {
   text-align: left;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-.content img {
+
+.container img {
   width: 100%;
   /*height quick fix*/
   height: 8em;
