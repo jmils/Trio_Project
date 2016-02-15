@@ -259,5 +259,3 @@ img {
 h1 {
   font-weight: 200;
 }
-
-.card:hover img.imagedropshadow { border: solid 1px yellow; -moz-box-shadow: 1px 1px 5px yellow; -webkit-box-shadow: 1px 1px 5px yellow; box-shadow: 1px 1px 5px yellow; }
