@@ -45,6 +45,12 @@ p {
   margin-bottom: 1em;
 }*/
 
+.header {
+  background-image: url("/assets/clapper_edit.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 .animation {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
@@ -187,7 +193,7 @@ p {
 }
 
 /*fixes images on front card*/
-img {
+ img {
   width: 100%;
   height: auto;
 }
