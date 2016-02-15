@@ -66,7 +66,8 @@ p {
   width: 80%;
   padding: 4%;
   margin: 20px auto;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
+  padding: .1em .1em .1em .1em;
 }
 
 .wrapper.cards {
@@ -81,7 +82,8 @@ p {
   width: 48%;
   height: 260px;
   margin: 10px 0 10px 4%;
-  background: #fff;
+  background: rgba(0, 0, 0, 0);
+  padding: .1em .1em .1em .1em;
 
   /* Set the depth of the elements */
   -webkit-perspective: 800px;
@@ -217,10 +219,10 @@ img {
   /*height: 8em;
 }*/
 
-h1 {
+.jumbotron h1 {
   font-weight: 200;
   text-align: left;
-  color: #FAFF81;
+   color: #FAFF81;
 }
 
 /*Rotten tomato pic*/
