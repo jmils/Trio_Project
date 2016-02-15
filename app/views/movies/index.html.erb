@@ -22,7 +22,7 @@
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
     <%title = movie.title.downcase.gsub " ", "_" %>
-      <center><a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a></center>
+      <center><a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><%= image_tag src="/assets/rotten_tomatoes_8290 copy.png", :class => "tomato" %></a></center>
           </div>
         </div>
       </div>
