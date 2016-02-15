@@ -1,5 +1,5 @@
-<div class="center jumbotron">
-  <h1>Guess The Movie</h1>
+<div class="center jumbotron header img-responsive">
+  <h1>Flipflop</h1>
 
 </div>
 
@@ -23,7 +23,7 @@
     <h4><%= movie.back_text %></h4>
     <img src="<%= movie.back_image %>" alt="">
     <%title = movie.title.downcase.gsub " ", "_" %>
-      <center><a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><button type="button">Tomato Meter</button></a></center>
+      <center><a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><img class="tomato" src="/assets/rotten_tomatoes_8290 copy.png"/></a></center>
           </div>
         </div>
       </div>
@@ -32,16 +32,14 @@
 </div>
 
 
-
-
-
-
   </div>
   <div class="box"></div>
 
 
 
 <% end %>
+
+
 
 
     <!-- <script src="javascript/movies.js"></script> -->
