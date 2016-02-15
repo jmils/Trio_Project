@@ -39,5 +39,6 @@ movies = Movie.create([{ title: 'Anchorman', front_text: "I have many leatherbou
 
 	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Bl.jpg", hint: "", likes: 0, dislikes: 0},
 
+		{ title: 'wwe the stone cold truth', front_text: "Give me a hell yea", front_image: "", question: "What is the movie?", back_text: 'Wwe The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpV.jpg", hint: "", likes: 0, dislikes: 0},
 
 	])
