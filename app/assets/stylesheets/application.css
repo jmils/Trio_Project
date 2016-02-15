@@ -49,7 +49,7 @@ p {
   background-image: url("/assets/clapper_edit.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
-  padding-bottom: 300px;
+  padding-bottom: 25%;
 }
 
 
@@ -204,7 +204,7 @@ img {
 .content img {
   width: 100%;
   /*height quick fix*/
-  height: 11em;
+  height: 13em;
 }
 
 
@@ -232,6 +232,12 @@ img {
   max-height: 2.5em;
   height: auto;
   width: auto;
+  margin-top: 4%;
+  display: inline-block;
+}
+
+a {
+  margin-left: 85%
 }
 
 a:hover {
