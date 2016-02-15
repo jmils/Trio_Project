@@ -49,7 +49,10 @@ p {
   background-image: url("/assets/clapper_edit.jpeg");
   background-repeat: no-repeat;
   background-size: 100%;
+  padding-bottom: 300px;
 }
+
+
 
 .animation {
   -webkit-transition: all 0.3s ease;
@@ -93,7 +96,7 @@ p {
 
 .card {
   width: 80%;
-  height: 100%;
+  height: 115%;
   position: absolute;
   cursor: pointer;
 
@@ -118,7 +121,7 @@ p {
   -o-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
   width: 80%;
-  height: 100%
+  height: 115%
 }
 
 .card .front,
@@ -191,20 +194,33 @@ p {
   font-weight: 100;
   text-align: left;
 }
+img {
+  padding: .3em .1em .1em .1em;
+  width: 90%;
+  height: 5em;
+}
+.content img {
+  width: 100%;
+  /*height quick fix*/
+  height: 11em;
+}
+
 
 /*fixes images on front card*/
- img {
+ /*img {
   width: 100%;
   height: auto;
 }
 .content img {
   width: 100%;
   /*height quick fix*/
-  height: 8em;
-}
+  /*height: 8em;
+}*/
 
 h1 {
   font-weight: 200;
+  text-align: left;
+  color: #FAFF81;
 }
 
 /*Rotten tomato pic*/
