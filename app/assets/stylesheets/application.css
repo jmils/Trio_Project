@@ -97,11 +97,7 @@ p {
 }
 
 .card {
-<<<<<<< HEAD
   width: 100%;
-=======
-  width: 80%;
->>>>>>> master
   height: 115%;
   position: absolute;
   cursor: pointer;
@@ -126,11 +122,7 @@ p {
   -moz-transform: rotateY( 180deg );
   -o-transform: rotateY( 180deg );
   transform: rotateY( 180deg );
-<<<<<<< HEAD
-  width: 100%;
-=======
   width: 80%;
->>>>>>> master
   height: 115%
 }
 
@@ -208,8 +200,6 @@ img {
   padding: .3em .1em .1em .1em;
   width: 90%;
   height: 5em;
-<<<<<<< HEAD
-=======
 }
 .content img {
   width: 100%;
@@ -234,9 +224,7 @@ img {
 
 .jumbotron h1 {
   font-weight: 200;
-<<<<<<< HEAD
 /*} lm*/
-=======
   text-align: left;
    color: #FAFF81;
 }
