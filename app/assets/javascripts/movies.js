@@ -21,6 +21,7 @@ $(document).ready(function(){
     });
   });
 
+
 // function () {
 //   var cards = document.querySelectorAll(".card.effect__click");
 //   for( var i  = 0; i < cards.length; i++ ) {
