@@ -13,11 +13,11 @@ movies = Movie.create([{ title: 'Anchorman', front_text: "I have many leatherbou
 
 	{ title: 'Tommy Boy', front_text: "Does this suit make me look fat?", front_image: "", question: "What is the movie?", back_text: "Tommy Boy", back_image: "http://i.imgur.com/Cv6YFuK.jpg", hint: "Fat guy in a little coat", likes: 0, dislikes: 0},
 
-	{ title: 'Zoolander', front_text: "TODD! Where's my goddamn latté?", front_image: "", question: "What is the movie?", back_text: "Tommy Boy", back_image: "http://i.imgur.com/bVgTPmB.jpg", hint: "Relax, don't do it.", likes: 0, dislikes: 0},
+	{ title: 'Zoolander', front_text: "TODD! Where's my goddamn latté?", front_image: "", question: "What is the movie?", back_text: "Zoolander", back_image: "http://i.imgur.com/bVgTPmB.jpg", hint: "Relax, don't do it.", likes: 0, dislikes: 0},
 
 	{ title: 'Wedding Crashers', front_text: "Don't ever leave me...cause I'd find you.", front_image: "", question: "What is the movie?", back_text: "Wedding  Crashers", back_image: "http://i.imgur.com/oRGnzYZ.jpg", hint: "meatloaf", likes: 0, dislikes: 0},
 
-	{ title: 'Tommy Boy', front_text: "", front_image: "http://i.imgur.com/J84C5ju.jpg?1", question: "What is the movie?", back_text: "Zoolander", back_image: "http://i.imgur.com/aM4RKa6.jpg", hint: "Callahan auto parts", likes: 0, dislikes: 0},
+	{ title: 'Tommy Boy', front_text: "", front_image: "http://i.imgur.com/J84C5ju.jpg?1", question: "What is the movie?", back_text: "Tommy Boy", back_image: "http://i.imgur.com/aM4RKa6.jpg", hint: "Callahan auto parts", likes: 0, dislikes: 0},
 
 	{ title: 'Zoolander', front_text: "Moisture is the essence of wetness, and wetness is the essence of beauty.", front_image: "", question: "What is the movie?", back_text: 'Zoolander', back_image: "http://i.imgur.com/EO3Qjjm.jpg", hint: "Merman", likes: 0, dislikes: 0},
 
