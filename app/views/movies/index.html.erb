@@ -8,21 +8,19 @@
     <div class="flip-3d" style="padding-top: 0px;"><h1 style="margin-top: 0px; padding-top: 0px;">l</h1></div>
     <div class="flip-3d" style="padding-top: 0px;"><h1 style="margin-top: 0px; padding-top: 0px;">o</h1></div>
     <div class="flip-3d" style="padding-top: 0px;"><h1 style="margin-top: 0px; padding-top: 0px;">p</h1></div>
-    <div class="flip-3d" style="padding-top: 2vw;"><img src="http://i.imgur.com/y2RWDFU.png" style="height: 10vw; width: 10vw;"></div>
+    <div class="flip-3d" style="padding-top: 1vw;"><img src="http://i.imgur.com/y2RWDFU.png" style="height: 10vw; width: 10vw;"></div>
   </div>
 </div>
 
-<div>
-<h2>Guess the movie, click the box, and see the answer!</h2>
-<div class="new-button"><h5><%= link_to 'Create your own!', new_movie_path %></h5></div>
-</div>
+  <h2>Guess the movie, click the box, and see the answer!</h2>
 
-<div class="spacing">
-</div>
-
-
-
-
+  <div class="spacing">
+  </div>
+  <center>
+    <div class="new-button">
+      <h5><%= link_to 'Create your own!', new_movie_path %></h5>
+    </div>
+  </center>
 
 <% @movies.each do |movie| %>
 
@@ -69,7 +67,9 @@
     <center>  <h3> The Team </h3> </center>
     <p>
       <center>
+        <a href="https://jamiemilanese.herokuapp.com/portfolio.html" target="_blank">
         <img src="https://avatars1.githubusercontent.com/u/16521673?v=3&s=460" class="img-circle">
+        </a>
         <a href="https://anderson-portfolio.herokuapp.com/" target="_blank">
           <img src="https://avatars0.githubusercontent.com/u/8919885?v=3&s=460" class="img-circle">
         </a>
