@@ -348,3 +348,30 @@ div.flip-3d:after {
   -webkit-transform: rotateY(0);
           transform: rotateY(0);
 }
+.new_movie {
+  display: block;
+  background-color: #C2DFE3;
+  color: #5C6B73;
+  border-radius: 8px;
+  padding-right: 5em;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  left: 32%;
+
+  clear: both;
+}
+
+.formspacing {
+  clear:both;
+  padding: 23.4em;
+}
+
+.formheader {
+  padding-bottom: 1em;
+}
+
+.nav-links {
+
+}
