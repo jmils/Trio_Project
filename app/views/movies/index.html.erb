@@ -5,25 +5,29 @@
 
 <% @movies.each do |movie| %>
 
-  <div class="col-xs-6 col-md-3">
- <div class="wrapper cards">
-   <div class="container">
-     <div class="card">
-        <div class=front>
-    <% if movie.front_text? %>
+<div class="col-xs-6 col-md-3">
+  <div class="wrapper cards">
+    <div class="container">
+      <div class="card">
+        <div class="front">
+          <% if movie.front_text? %>
 
-        <p>"<%= movie.front_text%>"</p>
-        <% end %>
-      <% if movie.front_image? %>
-        <img src="<%= movie.front_image %>" alt="">
-        <% end %>
-    </div>
-    <div class="back">
-      <div class="content">
-    <h4><%= movie.back_text %></h4>
-    <img src="<%= movie.back_image %>" alt="">
-    <%title = movie.title.downcase.gsub " ", "_" %>
-      <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><img class="tomato" src="/assets/rotten_tomatoes_8290 copy.png"/></a>
+          <h3>"<%= movie.front_text%>"</h3>
+          <% end %>
+          <% if movie.front_image? %>
+          <img src="<%= movie.front_image %>" alt="">
+          <% end %>
+        </div>
+        <div class="back">
+          <div class="content">
+            <div class="movie-img">
+              <h4><%= movie.back_text %></h4>
+              <img src="<%= movie.back_image %>" alt="">
+              <%title = movie.title.downcase.gsub " ", "_" %>
+            </div>
+            <div class="bad-tomato">
+              <a href="http://www.rottentomatoes.com/m/<%=title%>/" target="_blank"><img class="tomato" src="/assets/rotten_tomatoes_8290 copy.png"/></a>
+            </div>
           </div>
         </div>
       </div>
@@ -31,8 +35,6 @@
   </div>
 </div>
 
-
-  </div>
   <div class="box"></div>
 
 
