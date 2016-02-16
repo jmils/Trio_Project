@@ -13,12 +13,6 @@
 </div>
 <h2>Guess the movie, click the box, and see the answer!</h2>
 
-<div class="spacing">
-</div>
-
-<center>
-<div class="new-button"><h5><%= link_to 'Create your own!', new_movie_path %></h5></div>
-</center>
 
 <% @movies.each do |movie| %>
 
@@ -56,6 +50,15 @@
 
 <% end %>
 
+<div class="spacing">
+</div>
+
+<div class="spacing">
+</div>
+
+<center>
+<div class="new-button"><h3><%= link_to 'Create your own!', new_movie_path %></h3></div>
+</center>
 
 <div class="spacing">
 </div>
@@ -65,7 +68,9 @@
     <center>  <h3> The Team </h3> </center>
     <p>
       <center>
+        <a href="https://jamiemilanese.herokuapp.com/portfolio.html">
         <img src="https://avatars1.githubusercontent.com/u/16521673?v=3&s=460" class="img-circle">
+        </a>
         <a href="https://anderson-portfolio.herokuapp.com/" target="_blank">
           <img src="https://avatars0.githubusercontent.com/u/8919885?v=3&s=460" class="img-circle">
         </a>

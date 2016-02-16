@@ -48,7 +48,7 @@ h3 {
 .jumbotron h1 {
   font-weight: 900;
   text-align: left;
-  color: #FAFF81;
+    color: #FAFF81;
   font-size: 8vw;
 }
 h2 {
@@ -140,6 +140,7 @@ h2 {
 
 .card .front,
 .card .back {
+  border: solid #FAFF81 2px;
   display: block;
   height: 100%;
   width: 100%;
@@ -272,20 +273,24 @@ img {
   text-align: center;
 }
 
+/* car background color #C2DFE3;
+car text color: #5C6B73;*/
+
 div.new-button {
   padding-left: .5em;
   padding-right: .5em;
-  border: solid #5C6B73 2px;
+  padding-bottom: .5em;
+  border: solid #f7ff00 2px;
   border-radius: 7px;
-  width: 9vw;
+  width: 20vw;
   margin-left: 2vw;
   font-size: 1.5vw;
   text-align: center;
-  background-color: #9DB4C0;
+  background-color: #C2DFE3;
 }
 
 .new-button a {
-  color: #253237;
+  color: #5C6B73;
 }
 
 .new-button a:hover {
