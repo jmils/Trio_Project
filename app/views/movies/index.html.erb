@@ -13,6 +13,12 @@
 </div>
 <h2>Guess the movie, click the box, and see the answer!</h2>
 
+<div class="spacing">
+</div>
+
+
+<div class="new-button"><h5><%= link_to 'Create your own!', new_movie_path %></h5></div>
+  
 
 <% @movies.each do |movie| %>
 
@@ -49,6 +55,8 @@
 <div class="box"></div>
 
 <% end %>
+
+
 <div class="spacing">
 </div>
 

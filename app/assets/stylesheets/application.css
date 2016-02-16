@@ -311,6 +311,16 @@ h2 {
   border-width: thin;
 }
 
+div.new-button {
+  border: solid #5C6B73 2px;
+  border-radius: 7px;
+  width: 7vw;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #C2DFE3
+}
+
 .spacing {
   clear: both;
   padding: 2em;
