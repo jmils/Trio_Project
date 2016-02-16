@@ -5,7 +5,7 @@
 #
 movies = Movie.create([
 
-	{ title: 'Anchorman', front_text: "I have many leatherbound books", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9Hb.jpg", hint: "rich mahogany", likes: 0, dislikes: 0},
+	{ title: 'Anchorman', front_text: "I have many leatherbound books.", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9Hb.jpg", hint: "rich mahogany", likes: 0, dislikes: 0},
 
 	{ title: 'Billy Madison', front_text: "", front_image: "http://i.imgur.com/U79B7Vk.jpg?1", question: "What is the movie?", back_text: "Billy Madison", back_image: "http://i.imgur.com/exNKIz5b.jpg", hint: "back to school", likes: 0, dislikes: 0},
 
@@ -33,7 +33,7 @@ movies = Movie.create([
 
 	{ title: 'Dumb and Dumber', front_text: "", front_image: "http://i.imgur.com/MWqNYYH.jpg?1", question: "What is the movie?", back_text: 'Dumb and Dumber', back_image: "http://i.imgur.com/eZlmxELb.jpg", hint: "Shaggin Wagon", likes: 0, dislikes: 0},
 
-	{ title: 'Caddyshack', front_text: "In order to conquer an animal, I have to think like an animal, and whenever possible, look like one", front_image: "", question: "What is the movie?", back_text: 'Caddyshack', back_image: "http://i.imgur.com/OIrNHMPb.png?1", hint: "Hole in one", likes: 0, dislikes: 0},
+	{ title: 'Caddyshack', front_text: "In order to conquer an animal, I have to think like an animal, and whenever possible, look like one.", front_image: "", question: "What is the movie?", back_text: 'Caddyshack', back_image: "http://i.imgur.com/OIrNHMPb.png?1", hint: "Hole in one", likes: 0, dislikes: 0},
 
 	{ title: 'Animal House', front_text: "Was it over when the Germans bombed Pearl Harbor?", front_image: "", question: "What is the movie?", back_text: 'Animal House', back_image: "http://i.imgur.com/sZkD8MFb.gif", hint: "", likes: 0, dislikes: 0},
 
@@ -41,6 +41,6 @@ movies = Movie.create([
 
 	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Blb.jpg", hint: "", likes: 0, dislikes: 0},
 
-	{ title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
+	{ title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea.", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
 
 	])

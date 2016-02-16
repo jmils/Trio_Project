@@ -11,14 +11,18 @@
     <div class="flip-3d" style="padding-top: 2vw;"><img src="http://i.imgur.com/y2RWDFU.png" style="height: 10vw; width: 10vw;"></div>
   </div>
 </div>
+
+<div>
 <h2>Guess the movie, click the box, and see the answer!</h2>
+<div class="new-button"><h5><%= link_to 'Create your own!', new_movie_path %></h5></div>
+</div>
 
 <div class="spacing">
 </div>
 
 
-<div class="new-button"><h5><%= link_to 'Create your own!', new_movie_path %></h5></div>
-  
+
+
 
 <% @movies.each do |movie| %>
 
