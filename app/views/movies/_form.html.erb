@@ -12,40 +12,47 @@
   <% end %>
 
   <div class="field">
+<h2 class="formheader">Create your movie trivia card!</h2>
     <%= f.label :title %><br>
+    <p>
+      <em>Enter movie title.</em>
+    </p>
     <%= f.text_field :title %>
   </div>
   <div class="field">
     <%= f.label :front_text %><br>
+    <p>
+      <em>Enter movie quote or other clues here!</em>
+    </p>
     <%= f.text_field :front_text %>
   </div>
   <div class="field">
     <%= f.label :front_image %><br>
+    <p>
+      <em>Enter picture url.</em>
+    </p>
     <%= f.text_field :front_image %>
   </div>
   <div class="field">
-    <%= f.label :question %><br>
-    <%= f.text_field :question %>
-  </div>
-  <div class="field">
     <%= f.label :back_text %><br>
+    <p>
+      <em>Enter answer here.</em>
+    </p>
     <%= f.text_field :back_text %>
   </div>
   <div class="field">
     <%= f.label :back_image %><br>
+    <p>
+      <em>Enter picture url.</em>
+    </p>
     <%= f.text_field :back_image %>
   </div>
   <div class="field">
     <%= f.label :hint %><br>
+    <p>
+      <em>Give 'em a hint!</em>
+    </p>
     <%= f.text_field :hint %>
-  </div>
-  <div class="field">
-    <%= f.label :likes %><br>
-    <%= f.number_field :likes %>
-  </div>
-  <div class="field">
-    <%= f.label :dislikes %><br>
-    <%= f.number_field :dislikes %>
   </div>
   <div class="actions">
     <%= f.submit %>

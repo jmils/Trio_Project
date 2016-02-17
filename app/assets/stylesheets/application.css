@@ -13,50 +13,400 @@
  *= require_tree .
  *= require_self
  */
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
 
-* { box-sizing: border-box; }
-body { 
-  font-family: Avenir, Arial, sans-serif; margin: 8%;
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700,900);
+
+body {
+  font-family: 'Lato', sans-serif;
+  background-color: #FCFFFD;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
-div.flip-3d { 
-  perspective: 1200px; width: 30%; float: left;  
+
+p {
+  font-family: 'Lato', sans-serif;
 }
-div.flip-3d figure { 
-  position: relative; 
-  transform-style: preserve-3d; 
+
+h4 {
+  text-align: center;
+}
+
+h3 {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+
+.front h3 {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 1.3;
+}
+
+
+.jumbotron h1 {
+  font-weight: 900;
+  text-align: left;
+    color: #FAFF81;
+  font-size: 8vw;
+}
+h2 {
+  padding-top: 2vw;
+  margin-left: 2vw;
+  font-size: 2vw;
+  color: gray;
+  text-align: center;
+}
+
+.nav-links {
+  padding-left: 3em;
+}
+
+.header {
+  background-image: url("http://i.imgur.com/NxJd8pb.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding-bottom: 15%;
+}
+
+.animation {
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.wrapper {
+  width: 80%;
+  padding: 4%;
+  margin: 20px auto;
+  background: rgba(0, 0, 0, 0);
+  padding: .1em .1em .1em .1em;
+}
+
+.wrapper.cards {
+  background: 0;
+  width: 55em;
+  padding: 20px 0 0 0;
+}
+
+.container {
+  position: relative;
+  float: left;
+  width: 48%;
+  height: 260px;
+  margin: 10px 0 10px 4%;
+  background: rgba(0, 0, 0, 0);
+  padding: .1em .1em .1em .1em;
+
+  /* Set the depth of the elements */
+  -webkit-perspective: 800px;
+  -moz-perspective: 800px;
+  -o-perspective: 800px;
+  perspective: 800px;
+}
+
+.container:first-child {
+  margin-left: 0;
+}
+
+.card {
+  width: 80%;
+  height: 115%;
+  position: absolute;
+  cursor: pointer;
+
+  /* Set the transition effects */
+  -webkit-transition: -webkit-transform 0.4s;
+  -moz-transition: -moz-transform 0.4s;
+  -o-transition: -o-transform 0.4s;
+  transition: transform 0.4s;
+  -webkit-transform-style: preserve-3d;
+  -moz-transform-style: preserve-3d;
+  -o-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+}
+
+.card.flipped {
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+  width: 80%;
+  height: 115%
+}
+
+.card .front,
+.card .back {
+  border: solid #FAFF81 2px;
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 260px;
+  color: white;
+  text-align: center;
+  font-size: 4em;
+  position: absolute;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+  backface-visibility: hidden;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+}
+
+.card .back {
+  width: 100%;
+  padding-left: 3%;
+  padding-right: 3%;
+  font-size: 16px;
+  text-align: left;
+  line-height: 25px;
+}
+
+.formItem:first-child {
+  margin-top: 20px;
+}
+
+.card .back label {
+  display: inline-block;
+  width: 70px;
+  text-align: left;
+}
+
+.card .front {
+  background: #C2DFE3;
+  color: #5C6B73;
+  border-radius: 8px;
+}
+
+.card .back {
+  background: #C2DFE3;
+  color: #5C6B73;
+  border-radius: 8px;
+  -webkit-transform: rotateY( 180deg );
+  -moz-transform: rotateY( 180deg );
+  -o-transform: rotateY( 180deg );
+  transform: rotateY( 180deg );
+}
+
+.cardTitle {
+  font-size: 1.4em;
+  line-height: 1.2em;
+  margin: 0;
+}
+
+.content {
+  padding: 4%;
+  height: 100%;
+}
+
+.movie-img {
+  height: 80%;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
+  margin: .45em 0 .1em 0;
+  padding-left: .1em;
+  padding-right: .1em;
+  width: 90%;
+  height: 4.5em;
+  border-radius: 15px;
+}
+.content img {
+  width: 100%;
+  height: 84%;
+  border-radius: 15px;
+}
+
+.footer{
+  clear: both;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  background-color: #d9d9d9;
+  /*box-shadow: 3px 5px 10px 2px rgba(0, 0, 0, 0.25);*/
+  color: black;
+}
+.footer img {
+  width: 16em;
+  height: 16em;
+  padding: 2em 2em 2em 2em;
+}
+
+.footer h3 {
+
+  border-radius: 100em;
+  border-width: thin;
+}
+/*Rotten tomato pic*/
+.tomato {
+  background-image: url("http://i.imgur.com/1DVCQBN.png");
+  max-width: 3em;
+  max-height: 2.5em;
+  height: auto;
+  width: auto;
+  margin-top: 3%;
+}
+
+.bad-tomato {
+    text-align: right;
+}
+.bad-tomato a {
+    display: inline-block;
+    width: 100%;
+}
+
+.bad-tomato a:hover {
+  cursor: pointer;
+}
+
+ a:hover {
+  background-color: transparent;
+}
+
+.directions {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+/* car background color #C2DFE3;
+car text color: #5C6B73;*/
+
+div.new-button {
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .5em;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  width: 20vw;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #C2DFE3;
+}
+
+.new-button a {
+  color: #5C6B73;
+}
+
+.new-button a:hover {
+  text-decoration: none;
+  color: #f7ff00;
+  /*text-shadow: -0.5px 0 #5C6B73, 0 0.5px #5C6B73, 0.5px 0 #5C6B73, 0 -0.5px #5C6B73;*/
+}
+
+.spacing {
+  clear: both;
+  padding: 2em;
+}
+
+
+div.flip-3d {
+  perspective: 1200px;
+  float: left;
+  height: 10em;
+  width: auto;
+  color: white;
+  padding-top: 8em;
+  position: relative;
+  transform-style: preserve-3d;
   transition: 1s transform;
-  font-size: 1.6rem; 
-  background-color: white;
 }
-div.flip-3d figure img { 
-  width: 100%; height: auto; 
+div.flip-3d img {
+  width: 100%; height: auto;
 }
-div.flip-3d figure figcaption { 
-  position: absolute; 
-  width: 100%; height: 100%; top: 0; 
-  transform: rotateY(.5turn) translateZ(1px); 
-  background: rgba(255,255,255,0.9); 
-  text-align: center; 
-  padding-top: 45%; 
-  opacity: 0.6; 
-  transition: 1s .5s opacity; 
+div.flip-3d figcaption {
+  position: absolute;
+  width: 100%; height: 100%; top: 0;
+  transform: rotateY(.5turn) translateZ(1px);
+  background: rgba(255,255,255,0.9);
+  text-align: center;
+  padding-top: 45%;
+  opacity: 0.6;
+  transition: 1s .5s opacity;
 }
-div.flip-3d:hover figure { transform: rotateY(.5turn); }
-div.flip-3d:hover figure figcaption { opacity: 1; }
-div.flip-3d figure:after { 
+div.flip-3d:hover { transform: rotateY(.5turn); }
+div.flip-3d:hover figcaption { opacity: 1; }
+div.flip-3d:after {
   content: " "; display: block;
-  height: 8vw; width: 100%; 
-  transform: rotateX(90deg); 
-  background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%); 
+  height: 8vw; width: 100%;
+  transform: rotateX(90deg);
+  background-image: radial-gradient(ellipse closest-side, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
-@media screen and (max-width: 800px) { 
-    div#flip-3d { perspective-origin: center top; }
-	div#flip-3d figure { 
-    float: none; 
-    width: 50%; 
-    margin: 0 auto; 
-    margin-bottom: 12vw; 
-  }
-	div#flip-3d figure:last-child { display: none; }
+.card__back {
+  background-color: #1e1e1e;
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__front {
+  -webkit-transform: rotateY(-180deg);
+          transform: rotateY(-180deg);
+}
+
+.card.effect__click.flipped .card__back {
+  -webkit-transform: rotateY(0);
+          transform: rotateY(0);
+}
+.new_movie {
+  display: block;
+  background-color: #C2DFE3;
+  color: #5C6B73;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  padding-right: 5em;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  text-align: center;
+  top: 60%;
+  left: 32%;
+
+  clear: both;
+}
+
+.formspacing {
+  clear:both;
+  padding: 23.4em;
+}
+
+.formheader {
+  padding-bottom: 1em;
+}
+
+.editheader{
+  padding-left: 2em;
+}
+
+.nav-links {
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .5em;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  width: 8vw;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #C2DFE3;
+}
+
+.showpage {
+  display: block;
+  background-color: #C2DFE3;
+  color: #5C6B73;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  padding-left: 5em;
+  padding-right: 5em;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 42%;
+
 }
