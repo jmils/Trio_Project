@@ -5,6 +5,12 @@
 #
 movies = Movie.create([
 
+	{ title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea.", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
+
+	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spaceballs', back_image: "http://i.imgur.com/Lruxbzmb.jpg", hint: "", likes: 0, dislikes: 0},
+
+	{ title: 'Zoolander', front_text: "Moisture is the essence of wetness, and wetness is the essence of beauty.", front_image: "", question: "What is the movie?", back_text: 'Zoolander', back_image: "http://i.imgur.com/EO3Qjjmb.jpg", hint: "Merman", likes: 0, dislikes: 0},
+
 	{ title: 'Anchorman', front_text: "I have many leatherbound books.", front_image: "", question: "What is the movie?", back_text: "Anchorman: The Legend of Ron Burgundy", back_image: "http://i.imgur.com/9c8bG9Hb.jpg", hint: "rich mahogany", likes: 0, dislikes: 0},
 
 	{ title: 'Billy Madison', front_text: "", front_image: "http://i.imgur.com/U79B7Vk.jpg?1", question: "What is the movie?", back_text: "Billy Madison", back_image: "http://i.imgur.com/exNKIz5b.jpg", hint: "back to school", likes: 0, dislikes: 0},
@@ -21,7 +27,6 @@ movies = Movie.create([
 
 	{ title: 'Tommy Boy', front_text: "", front_image: "http://i.imgur.com/J84C5ju.jpg?1", question: "What is the movie?", back_text: "Tommy Boy", back_image: "http://i.imgur.com/aM4RKa6b.jpg", hint: "Callahan auto parts", likes: 0, dislikes: 0},
 
-	{ title: 'Zoolander', front_text: "Moisture is the essence of wetness, and wetness is the essence of beauty.", front_image: "", question: "What is the movie?", back_text: 'Zoolander', back_image: "http://i.imgur.com/EO3Qjjmb.jpg", hint: "Merman", likes: 0, dislikes: 0},
 
 	{ title: 'Mean Girls', front_text: "", front_image: "http://i.imgur.com/RN7T6Hl.jpg?1", question: "What is the movie?", back_text: 'Mean Girls', back_image: "http://i.imgur.com/3B0tdKYb.jpg", hint: "Burn Book", likes: 0, dislikes: 0},
 
@@ -37,10 +42,10 @@ movies = Movie.create([
 
 	{ title: 'Animal House', front_text: "Was it over when the Germans bombed Pearl Harbor?", front_image: "", question: "What is the movie?", back_text: 'Animal House', back_image: "http://i.imgur.com/sZkD8MFb.gif", hint: "", likes: 0, dislikes: 0},
 
-	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spaceballs', back_image: "http://i.imgur.com/Lruxbzmb.jpg", hint: "", likes: 0, dislikes: 0},
+
 
 	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Blb.jpg", hint: "", likes: 0, dislikes: 0},
 
-	{ title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea.", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
+
 
 	])
