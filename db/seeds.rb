@@ -5,7 +5,7 @@
 #
 movies = Movie.create([
 
-	{ title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea.", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
+
 
 	{ title: 'Spaceballs', front_text: "", front_image: "http://i.imgur.com/gIGOJVz.jpg?1", question: "What is the movie?", back_text: 'Spaceballs', back_image: "http://i.imgur.com/Lruxbzmb.jpg", hint: "", likes: 0, dislikes: 0},
 
@@ -46,6 +46,7 @@ movies = Movie.create([
 
 	{ title: 'Airplane', front_text: "Surely you can't be serious.\" \n\"I am serious, and don't call me Shirley.", front_image: "", question: "What is the movie?", back_text: 'Airplane', back_image: "http://i.imgur.com/gue41Blb.jpg", hint: "", likes: 0, dislikes: 0},
 
+	# { title: 'WWE The Stone Cold Truth', front_text: "Give me a hell yea.", front_image: "", question: "What is the movie?", back_text: 'WWE The Stone Cold Truth', back_image: "http://i.imgur.com/6Xh5tpVb.jpg", hint: "", likes: 0, dislikes: 0},
 
 
 	])
