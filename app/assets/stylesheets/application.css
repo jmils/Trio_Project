@@ -357,7 +357,8 @@ div.flip-3d:after {
   display: block;
   background-color: #C2DFE3;
   color: #5C6B73;
-  border-radius: 8px;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
   padding-right: 5em;
   box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
   position: absolute;
@@ -377,6 +378,35 @@ div.flip-3d:after {
   padding-bottom: 1em;
 }
 
+.editheader{
+  padding-left: 2em;
+}
+
 .nav-links {
+  padding-left: .5em;
+  padding-right: .5em;
+  padding-bottom: .5em;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  width: 8vw;
+  margin-left: 2vw;
+  font-size: 1.5vw;
+  text-align: center;
+  background-color: #C2DFE3;
+}
+
+.showpage {
+  display: block;
+  background-color: #C2DFE3;
+  color: #5C6B73;
+  border: solid #f7ff00 2px;
+  border-radius: 7px;
+  padding-left: 5em;
+  padding-right: 5em;
+  box-shadow: 3px 5px 20px 2px rgba(0, 0, 0, 0.25);
+  position: absolute;
+  text-align: center;
+  top: 65%;
+  left: 42%;
 
 }
