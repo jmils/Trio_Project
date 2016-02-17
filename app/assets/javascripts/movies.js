@@ -1,18 +1,7 @@
 // Place all the behaviors and hooks related to the matching controller here.
 // All this logic will automatically be available in application.js.
 
-$(document).ready(function(){
-  $('#go').click(function() {
-    console.log("hey");
-      var page1 = $('.page1');
-      var page2 = $('.page2');
-      var toHide = page1.is(':visible') ? page1 : page2;
-      var toShow = page2.is(':visible') ? page1 : page2;
 
-      toHide.removeClass('flip in').addClass('flip out').hide();
-      toShow.removeClass('flip out').addClass('flip in').show();
-  });
-});
 
     // new click implementation
     $(document).ready(function(){
