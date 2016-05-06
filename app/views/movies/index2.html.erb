@@ -22,7 +22,7 @@
     <% @movies.each do |movie| %>
       <tr>
         <td><%= movie.title %></td>
-        <td><%= movie.front_text %></td>
+        <td class="front"><%= movie.front_text %></td>
         <td><%= movie.front_image %></td>
         <td><%= movie.question %></td>
         <td><%= movie.back_text %></td>
@@ -54,8 +54,8 @@
       </span>
       <img src="<%= movie.front_image %>" alt="">
     </div>
- 
-   
+
+
     <div class="card__back">
       <span class="card__text">
         <h4><%= movie.back_text %></h4>

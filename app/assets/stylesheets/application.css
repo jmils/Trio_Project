@@ -410,3 +410,7 @@ div.flip-3d:after {
   left: 42%;
 
 }
+
+.front {
+  font-size: small;
+}
